@@ -15,7 +15,12 @@ public class User {
     @Column
     private String lastName;
     @Column
+    private String userName;
+    @Column
     private String email;
+    @Column
+    private String password;
+
 
     public int getId() {
         return id;
@@ -23,6 +28,22 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFirstName() {
@@ -55,7 +76,9 @@ public class User {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", userName='" + userName + '\'' +
                 ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
