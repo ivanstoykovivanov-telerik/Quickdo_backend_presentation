@@ -27,25 +27,18 @@ public class TaskController {
 
     @PostMapping("/save")
     public Task  saveTask(@RequestBody Task task ){
+        System.out.println("----------------------------------");
         System.out.println("-------------save------------------");
-        System.out.println("----------------------------------");
         System.out.println("Task: " + task.toString());
-        return this.taskService.saveTask(task);
-    }
-
-    @PostMapping("/update")
-    public Task  updateTask(@RequestBody Task task ){
-        System.out.println("---------------update-------------------");
-        System.out.println("----------------------------------");
-        System.out.println("Task: " + task.toString());
-        return this.taskService.saveTask(task);
+        return this.taskService.save(task);
     }
 
     @PostMapping("/delete")
     public void delete(@RequestBody Task task) {
-         taskService.delete(task);
+        System.out.println("----------------------------------");
+        System.out.println("---------------delete-------------------");
+        System.out.println("Task: " + task.toString());
+        taskService.delete(task);
     }
-
-
 
 }

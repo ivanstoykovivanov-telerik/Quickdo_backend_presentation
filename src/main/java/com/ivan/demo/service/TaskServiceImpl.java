@@ -21,13 +21,13 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public Task saveTask(Task task) {
+    public Task save(Task task) {
         return this.taskRepository.save(task);
     }
 
     @Override
     public void delete(Task task) {
-        System.out.println("************************");
+        System.out.println("**********delete**************");
         System.out.println(task);
         System.out.println("************************");
         this.taskRepository.delete(task);
