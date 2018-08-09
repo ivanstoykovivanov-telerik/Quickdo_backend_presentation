@@ -24,4 +24,5 @@ public class TaskServiceImpl implements TaskService {
     public Task saveTask(Task task) {
         return this.taskRepository.save(task);
     }
+
 }

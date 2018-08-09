@@ -7,6 +7,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "tasks")
 public class Task {
+
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,8 +18,20 @@ public class Task {
     private LocalDate dueDate;
     @Column
     private Boolean completed;
+    @Enumerated(EnumType.STRING)
+    private TaskStatus status;
+
+
+    public TaskStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(TaskStatus status) {
+        this.status = status;
+    }
 
     public Long getId() {
+
         return id;
     }
 
@@ -57,6 +70,7 @@ public class Task {
                 ", name='" + name + '\'' +
                 ", dueDate=" + dueDate +
                 ", completed=" + completed +
+                ", status=" + status +
                 '}';
     }
 }

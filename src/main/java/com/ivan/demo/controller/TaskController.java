@@ -19,13 +19,17 @@ public class TaskController {
     @GetMapping
     public List<Task> listTasks(){
         List<Task> tasks = this.taskService.findAll();
-        tasks.stream()
-                .forEach(System.out::println);
+//        tasks.stream()
+//                .forEach(System.out::println);
         return this.taskService.findAll();
     }
 
     @PostMapping("/save")
     public Task  saveTask(@RequestBody Task task ){
+        System.out.println("----------------------------------");
+        System.out.println("----------------------------------");
+        System.out.println("Task: " + task.toString());
         return this.taskService.saveTask(task);
     }
+
 }
