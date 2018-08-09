@@ -10,4 +10,6 @@ public interface TaskService {
 
     Task saveTask(Task task);
 
+    void delete(Task task);
+
 }

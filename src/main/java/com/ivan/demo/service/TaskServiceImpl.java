@@ -25,4 +25,13 @@ public class TaskServiceImpl implements TaskService {
         return this.taskRepository.save(task);
     }
 
+    @Override
+    public void delete(Task task) {
+        System.out.println("************************");
+        System.out.println(task);
+        System.out.println("************************");
+        this.taskRepository.delete(task);
+    }
+
+
 }
